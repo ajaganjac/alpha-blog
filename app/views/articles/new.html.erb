@@ -2,6 +2,19 @@
   Create an article
 </h1>
 
+<% if @article.errors.any?  %>
+<h2>
+  Dit zijn de errors:
+</h2>
+<ul>
+  
+<% @article.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+
+<% end %>
+</ul>
+<% end %>
+
 <%= form_for @article do |f| %>
 <p>
   <%= f.label :title %> <br>
