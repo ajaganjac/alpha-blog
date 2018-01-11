@@ -4,7 +4,7 @@ before_action :set_user, only: [:edit, :update, :show]
 
 def index
 
-@users = User.paginate(page: params[:page], per_page: 5)
+@users = User.all
 
 end
 
@@ -54,7 +54,7 @@ end
 
 def show
 
-@user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+@user_articles = @user.articles.all
 
 end
 
