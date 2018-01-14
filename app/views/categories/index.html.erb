@@ -2,6 +2,8 @@
 
 <div align="center">
 
+
+
 <% @categories.each do |category| %>
 
 <ul class="listing">
@@ -16,6 +18,8 @@
 
 </li>
 
+<li><small><%= pluralize(category.articles.count, "article") %></small></li>
+
 </div>
 
 </div>
@@ -23,5 +27,7 @@
 </ul>
 
 <% end %>
+
+
 
 </div>
